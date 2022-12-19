@@ -4,12 +4,14 @@ attrs==22.1.0
 backcall==0.2.0
 backports.zoneinfo==0.2.1
 decorator==5.1.1
+dj-database-url==1.2.0
 Django==4.0.7
 djangorestframework==3.14.0
 djangorestframework-simplejwt==5.2.2
 drf-spectacular==0.25.1
 exceptiongroup==1.0.4
 executing==1.2.0
+gunicorn==20.1.0
 importlib-resources==5.10.1
 inflection==0.5.1
 iniconfig==1.1.1
@@ -45,4 +47,5 @@ tomli==2.0.1
 traitlets==5.7.0
 uritemplate==4.1.1
 wcwidth==0.2.5
+whitenoise==6.2.0
 zipp==3.11.0
