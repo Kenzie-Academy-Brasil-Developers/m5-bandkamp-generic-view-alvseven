@@ -1,9 +1,13 @@
 from pathlib import Path
 from datetime import timedelta
+import os
+import dotenv
+
+dotenv.load_dotenv()
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = "django-e91823y78dgasdas89cvyxz76the912j321321-cx9!!#1232111!!!"
+SECRET_KEY = os.getenv("SECRET_KEY")
 
 DEBUG = True
 
@@ -62,6 +66,13 @@ WSGI_APPLICATION = "bandkamp.wsgi.application"
 
 DATABASES = {
     "default": {
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": os.getenv("DATABASE"),
+        "USER": os.getenv("USER"),
+        "PASSWORD": os.getenv("PASSWORD")
+    },
+    
+    "dev": {
         "ENGINE": "django.db.backends.sqlite3",
         "NAME": BASE_DIR / "db.sqlite3",
     }
