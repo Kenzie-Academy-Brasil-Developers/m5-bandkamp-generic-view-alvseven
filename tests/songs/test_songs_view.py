@@ -96,6 +96,10 @@ class SongViewTest(APITestCase):
         # RETORNO JSON
         expected_data = {"id": 1, "album_id": self.album.pk, **song_data}
         resulted_data = response.json()
+        
+        print('-' * 50)
+        print(song_data)
+        print(resulted_data)
         msg = (
             "Verifique se as informações retornadas no POST "
             + f"em `{self.BASE_URL}` estão corretas."

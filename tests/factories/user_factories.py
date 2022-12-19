@@ -5,7 +5,7 @@ from rest_framework_simplejwt.tokens import RefreshToken
 User: AbstractUser = get_user_model()
 
 
-def create_user_with_token(user_data=None) -> tuple[AbstractUser, RefreshToken]:
+def create_user_with_token(user_data=None) -> 'tuple[AbstractUser, RefreshToken]':
     if not user_data:
         user_data = {
             "username": "lucira_buster",
